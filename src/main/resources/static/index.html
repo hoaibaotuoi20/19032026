@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NguyenNgocNhat Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NguyenNgocNhat ✨</h1>
+            <p class="subtitle">A simple full-stack app running locally</p>
+        </header>
+
+        <main class="card">
+            <div class="input-group">
+                <input type="text" id="nameInput" placeholder="Enter your name..." autocomplete="off">
+                <button id="greetBtn">Greet Me</button>
+            </div>
+            
+            <div id="result" class="result-box hidden">
+                <p id="message"></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Built with Spring Boot & Vanilla JS</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
