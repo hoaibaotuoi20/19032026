@@ -17,8 +17,8 @@ WORKDIR /app
 # Copy thành phẩm (file .jar) từ "build" stage sang đây
 COPY --from=build /app/target/*.jar app.jar
 
-# Công bố cổng 8080 (cổng mặc định của Spring Boot)
-EXPOSE 8080
+# Công bố cổng 80 (cổng yêu cầu của hệ thống ITHUTECH)
+EXPOSE 80
 
-# Câu lệnh cuối cùng khi container chạy (chạy file .jar)
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Câu lệnh cuối cùng khi container chạy (chạy file .jar và thiết lập cổng 80)
+ENTRYPOINT ["java", "-jar", "app.jar", "--server.port=80"]
